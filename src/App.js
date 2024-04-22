@@ -1,25 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import logo from './logo.png';
 import shape from './shape.png';
 import './App.css';
+import Home from './Home.js';
+import About from './About.js';
+import Portfolio from './Portfolio';
 
-function Home() {
-  return <h2>Home</h2>;
-}
 
-function About() {
-  return <h2>About</h2>;
-}
 
-function Portfolio() {
-  return <h2>Portfolio</h2>;
-}
-
-function Services() {
-  return <h2>Services</h2>;
-}
+<Router>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/portfolio" component={Portfolio} />
+        </Routes>
+      </div>
+    </Router>
 
 function App() {
   const handleColorChange = () => {
@@ -30,16 +29,19 @@ function App() {
     }
   };
 
+
   return (
+
+
     <div>
       <div className="hero">
         <nav>
           <img src={logo} alt="Logo" className="logo" />
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/portfolio">Portfolio</a></li>
-            <li><a href="/services">Services</a></li>
+            <li><a href="Home">Home</a></li>
+            <li><a href="About">About</a></li>
+            <li><a href="/Portfolio">Portfolio</a></li>
+            <li><a href="/Services">Services</a></li>
             <li><a href="https://en.wikipedia.org/wiki/List_of_largest_technology_companies_by_revenue">Customers</a></li>
           </ul>
         </nav>
