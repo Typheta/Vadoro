@@ -11,6 +11,7 @@ function Services() {
             <div className="detel">
                 <h1>Our Services</h1>
                 <p>We offer a wide range of software development services tailored to meet the needs of businesses of all sizes:</p>
+                <br></br>
                 <ul>
                     <li>Custom Software Development</li>
                     <li>Web Application Development</li>
